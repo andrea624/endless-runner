@@ -27,11 +27,13 @@ class Menu extends Phaser.Scene{
             },
             fixedWidth: 0
         }
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Endless Runner', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2, 'Use Space to jump', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Press Space to start', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Buying Grapes ', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, '<- for instructions', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, '-> to start', menuConfig).setOrigin(0.5)
         // defines key 
         keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)
+        keyLeft = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
+        keyRight = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.RIGHT)
 
 
         menuConfig.backgroundColor = '#00FF00'
@@ -40,7 +42,10 @@ class Menu extends Phaser.Scene{
     }
 
     update(){
-        if(Phaser.Input.Keyboard.JustDown(keySpace)){
+        if(Phaser.Input.Keyboard.JustDown(keyLeft)){
+            this.scene.start('InstructionsScene')
+        }
+        if(Phaser.Input.Keyboard.JustDown(keyRight)){
             this.scene.start('playScene')
         }
  
