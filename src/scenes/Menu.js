@@ -34,7 +34,7 @@ class Menu extends Phaser.Scene{
             },
             fixedWidth: 0
         }
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Buying Grapes ', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'No Lemons ', menuConfig).setOrigin(0.5)
         this.add.text(game.config.width/2, game.config.height/2, '<- for instructions and -> for credits', menuConfig).setOrigin(0.5)
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Space to start', menuConfig).setOrigin(0.5)
         // defines key 
