@@ -1,4 +1,4 @@
-class Chicken extends Phaser.Gameobjects.Sprite{
+class Duck extends Phaser.Gameobjects.Sprite{
     constructor(scene, x, y, texture){
         super(scene, x, y, texture)
 

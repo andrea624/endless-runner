@@ -18,8 +18,8 @@ class Credit extends Phaser.Scene{
             },
             fixedWidth: 0
         }
-        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Credits: ', creditConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2, 'Background Music: , PixelArt: ', creditConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, ' Audio and PixelArt made by: Andrea Martinez', creditConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, 'Apps used: = Voice Memos and Piskel', creditConfig).setOrigin(0.5)
         this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'To return to Menu press <- or Space to start', creditConfig).setOrigin(0.5)
         // defines key 
         keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)

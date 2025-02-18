@@ -3,10 +3,15 @@ class Menu extends Phaser.Scene{
         super("menuScene")
     }
     preload(){
-        this.load.image('sky', './assets/Sky.png')
+        this.load.image('duck', 'assets/Duck.png')
+         this.load.image('sky', './assets/Sky.png')
         this.load.image('trees', './assets/Trees.png')
         this.load.image('stand', './assets/Stand.png')
         this.load.image('ground', './assets/Ground.png')
+        this.load.image('lemon', './assets/Lemon.png')
+        this.load.audio('collects', './assets/collects.m4a')
+        //this.load.spritesheet('duck', './assets/Duck')
+        
         //this.load.image('bushes', './assets/Bushes.png')
         //this.load.image('background', './assets/background.png')
         //this.load.image('background', './assets/background2.png')
