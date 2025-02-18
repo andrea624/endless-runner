@@ -9,7 +9,7 @@ let config = {
     type: Phaser.AUTO,
     width: 640,
     height: 480,
-    scene: [ Menu, Play, Instructions ]
+    scene: [ Menu, Play, Instructions, Credit ]
 }
 let game = new Phaser.Game(config)
 //reserves key

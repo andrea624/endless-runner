@@ -5,6 +5,8 @@ class Menu extends Phaser.Scene{
     preload(){
         this.load.image('sky', './assets/Sky.png')
         this.load.image('trees', './assets/Trees.png')
+        this.load.image('stand', './assets/Stand.png')
+        this.load.image('ground', './assets/Ground.png')
         //this.load.image('bushes', './assets/Bushes.png')
         //this.load.image('background', './assets/background.png')
         //this.load.image('background', './assets/background2.png')
@@ -28,8 +30,8 @@ class Menu extends Phaser.Scene{
             fixedWidth: 0
         }
         this.add.text(game.config.width/2, game.config.height/2 - borderUISize - borderPadding, 'Buying Grapes ', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2, '<- for instructions', menuConfig).setOrigin(0.5)
-        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, '-> to start', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2, '<- for instructions and -> for credits', menuConfig).setOrigin(0.5)
+        this.add.text(game.config.width/2, game.config.height/2 + borderUISize + borderPadding, 'Space to start', menuConfig).setOrigin(0.5)
         // defines key 
         keySpace = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.SPACE)
         keyLeft = this.input.keyboard.addKey(Phaser.Input.Keyboard.KeyCodes.LEFT)
@@ -45,8 +47,11 @@ class Menu extends Phaser.Scene{
         if(Phaser.Input.Keyboard.JustDown(keyLeft)){
             this.scene.start('InstructionsScene')
         }
-        if(Phaser.Input.Keyboard.JustDown(keyRight)){
+        if(Phaser.Input.Keyboard.JustDown(keySpace)){
             this.scene.start('playScene')
+        }
+        if(Phaser.Input.Keyboard.JustDown(keyRight)){
+            this.scene.start('creditScene')
         }
  
     }
